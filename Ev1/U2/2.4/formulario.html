@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Formulario para evaluar conocimientos sobre animales domésticos.">
+    <title>Formulario - Animales</title>
+    <link rel="icon" href="logo.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <h1>¿Qué sabes de Animales Domésticos?</h1>
+    <hr>
+
+    <!-- Formulario que se envía de forma segura -->
+    <form action="datos.php" method="post" enctype="multipart/form-data">
+
+        <!-- Agrupación de datos personales -->
+        <fieldset>
+            <legend>Información básica</legend>
+
+            <!-- Pregunta con máximo de caracteres -->
+            <label>1. Escribe el nombre de un animal doméstico (máx 15 caracteres):</label><br>
+            <input type="text" name="animal" maxlength="15" required>
+            <br><br>
+
+            <!-- Número -->
+            <label>2. ¿Cuántas mascotas tienes?</label><br>
+            <input type="number" name="cantidad" min="0" max="20">
+            <br><br>
+
+            <!-- Fecha -->
+            <label>3. ¿Desde qué año tienes mascota?</label><br>
+            <input type="date" name="fecha">
+            <br><br>
+
+            <!-- Color -->
+            <label>4. Elige tu color favorito para collar:</label><br>
+            <input type="color" name="color">
+            <br><br>
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Conocimientos</legend>
+
+            <!-- Checkbox (varias opciones) -->
+            <label>5. ¿Qué animales pueden ser domésticos?</label><br>
+            <input type="checkbox" name="tipo[]" value="perro"> Perro<br>
+            <input type="checkbox" name="tipo[]" value="gato"> Gato<br>
+            <input type="checkbox" name="tipo[]" value="tigre"> Tigre<br>
+            <br>
+
+            <!-- Radio (una sola opción) -->
+            <label>6. ¿Cuál es el más común?</label><br>
+            <input type="radio" name="comun" value="perro"> Perro<br>
+            <input type="radio" name="comun" value="gato"> Gato<br>
+            <input type="radio" name="comun" value="pez"> Pez<br>
+            <br>
+
+            <!-- Desplegable -->
+            <label>7. ¿Cuál vive más años?</label><br>
+            <select name="vida">
+                <option value="perro">Perro</option>
+                <option value="gato">Gato</option>
+                <option value="loro">Loro</option>
+            </select>
+            <br><br>
+
+            <!-- Barra móvil -->
+            <label>8. Valora tu nivel de conocimiento:</label><br>
+            Bajo
+            <input type="range" name="nivel" min="0" max="10">
+            Alto
+            <br><br>
+
+            <!-- Patrón obligatorio -->
+            <label>9. Introduce un código con formato AAA-123:</label><br>
+            <input type="text" name="codigo" pattern="[A-Z]{3}-[0-9]{3}" 
+            title="Debe tener formato AAA-123" required>
+            <br><br>
+
+            <!-- Subida de archivo -->
+            <label>10. Sube una imagen de tu mascota:</label><br>
+            <input type="file" name="imagen">
+            <br><br>
+
+        </fieldset>
+
+        <br>
+
+        <!-- Botones -->
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpiar formulario">
+
+    </form>
+
+    <hr>
+
+    <!-- IFRAME -->
+    <h2>Información adicional</h2>
+
+    <iframe src="https://www.wikipedia.org" width="600" height="300">
+    </iframe>
+
+    <hr>
+
+    <!-- EXTRA JAVASCRIPT -->
+
+    <h2>Extra JavaScript</h2>
+
+    <!-- Cambio de texto -->
+    <p id="texto">Este texto cambiará al hacer clic.</p>
+    <button onclick="document.getElementById('texto').innerHTML='¡Texto cambiado correctamente!'">
+        Cambiar texto
+    </button>
+
+    <br><br>
+
+    <!-- Cambio de imagen -->
+    <img id="imagenJS" src="perro.jpg" width="200">
+    <br>
+    <button onclick="document.getElementById('imagenJS').src='https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg'">
+        Cambiar imagen
+    </button>
+
+</body>
+</html>

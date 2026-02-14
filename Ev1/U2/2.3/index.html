@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Web sobre animales domésticos con imágenes, listas y multimedia.">
+    <title>Animales Domésticos</title>
+    <link rel="icon" href="logo.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <h1 id="inicio">Animales Domésticos</h1>
+    <hr>
+
+    <h2>Imagen local (en píxeles)</h2>
+    <img src="perro.jpg" width="300" height="200" alt="Perro">
+
+    <h2>Imagen externa (en porcentaje)</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg" width="50%" height="50%" alt="Gato">
+
+    <hr>
+
+    <h2>Listas</h2>
+
+    <h3>Lista desordenada</h3>
+    <ul>
+        <li>Perros</li>
+        <li>Gatos</li>
+        <li>Pájaros</li>
+    </ul>
+
+    <h3>Lista ordenada con start</h3>
+    <ol start="5">
+        <li>Alimentación</li>
+        <li>Cuidados</li>
+        <li>Higiene</li>
+    </ol>
+
+    <h3>Lista anidada</h3>
+    <ul>
+        <li>Perros
+            <ul>
+                <li>Galgos</li>
+                <li>Caniches</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>Lista de definición</h3>
+    <dl>
+        <dt>Perro</dt>
+        <dd>Animal doméstico leal y protector.</dd>
+
+        <dt>Gato</dt>
+        <dd>Animal independiente y ágil.</dd>
+    </dl>
+
+    <hr>
+
+    <h2>Enlaces</h2>
+
+    <!-- Enlace externo -->
+    <p>
+        Visita <a href="https://www.nationalgeographic.com" target="_blank">
+        National Geographic</a>
+    </p>
+
+    <!-- Enlace interno -->
+    <p>
+        <a href="#inicio">Volver al inicio</a>
+    </p>
+
+    <!-- Enlace a otra página -->
+    <p>
+        <a href="animales.html">Ir a página secundaria</a>
+    </p>
+
+    <!-- Imagen como enlace -->
+    <a href="animales.html">
+        <img src="perro.jpg" width="150" alt="Ir a animales">
+    </a>
+
+    <!-- Botón como enlace -->
+    <p>
+        <a href="animales.html">
+            <button>Ver más información</button>
+        </a>
+    </p>
+
+    <hr>
+
+    <h2>Vídeo de YouTube</h2>
+
+    <iframe width="560" height="315"
+        src="https://www.youtube.com/shorts/WmAh2u68aRk"
+        title="Video YouTube"
+        allowfullscreen>
+    </iframe>
+
+    <hr>
+
+    <h2>Audio</h2>
+
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+    </audio>
+
+    <hr>
+
+    <h2>Música de fondo</h2>
+
+    <audio autoplay loop>
+        <source src="audio.mp3" type="audio/mpeg">
+    </audio>
+
+    <hr>
+
+    <h2>Imagen con zonas clicables (EXTRA)</h2>
+
+    <img src="perro.jpg" usemap="#mapa" width="300">
+
+    <map name="mapa">
+        <area shape="rect" coords="0,0,150,150" href="https://www.google.com" alt="Zona 1">
+        <area shape="rect" coords="150,0,300,150" href="animales.html" alt="Zona 2">
+    </map>
+
+</body>
+</html>

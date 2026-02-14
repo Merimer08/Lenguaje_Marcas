@@ -1,0 +1,20 @@
+body {
+    background-color: #222;
+    font-family: Courier;
+    color: white;
+}
+
+h1 {
+    color: orange;
+    text-align: center;
+}
+
+p {
+    color: white;
+}
+
+.caja {
+    background-color: purple;
+    border: 4px dashed yellow;
+    padding: 10px;
+}
